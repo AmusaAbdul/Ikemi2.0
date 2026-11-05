@@ -10,13 +10,27 @@ const Contact = () => {
     function handleSubmit(e) {
         e.preventDefault();
         const form = new FormData(e.currentTarget);
+
+        const name = form.get("name")?.trim();
+        const service = form.get("service");
+        const date = form.get("date");
+        const time = form.get("time");
+        const location = studio
+            ? "Studio session"
+            : form.get("location")?.trim();
+        const notes = form.get("notes")?.trim();
+
+        if (!name || !service || !date || !time || !location) {
+            alert("Please complete all required fields");
+            return;
+        }
         const msg = buildBookingMessage({
-            name: form.get("name")?.trim(),
-            service: form.get("service"),
-            date: form.get("date"),
-            time: form.get("time"),
-            location: studio ? "Studio session" : form.get("location"),
-            notes: form.get("notes")?.trim(),
+            name,
+            service,
+            date,
+            time,
+            location,
+            notes,
         });
         window.open(whatsappLink(site.whatsapp, msg), "_blank", "noopener");
     }
