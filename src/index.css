@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+body {
+  background-color: #1d0b17;
+  color: #fbe9ec;
+  font-family: 'DM Sans', Consolas, 'Courier New', monospace;
+  
+}
+
+@theme {
+  --color-text: #fbe9ec;
+  --color-text-soft: #3a1a30;
+  --color-text-muted: #c4a6b3;
+  --color-button: #e58ab0;
+  --color-border: #44243a;
+  --color-brand: #e58ab0;
+  --color-rouge: #b3294e;
+
+  --font-heading: 'Cormorant Garamond', Consolas, 'Courier New', monospace;
+  --font-body: 'DM Sans', Consolas, 'Courier New', monospace
+}
+
+.container {
+  width: 1126px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 150px;
+  grid-template-areas:
+    "a b b c"
+    "a d e c"
+    "f f f f";
+}
+
+.tile {
+  border-radius: 16px;
+  display: flex;
+  align-items: flex-end;
+  padding: 12px;
+}
+
+.a { grid-area: a; }
+.b { grid-area: b; }
+.c { grid-area: c; }
+.d { grid-area: d; }
+.e { grid-area: e; }
+.f { grid-area: f; }
+
+.portrait {
+  border-radius: 50% 50% 0% 0%;
+  height: 500px;
+  width: 100%;
+}
+input {
+  outline: none;
+}
+@media (max-width: 700px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "a b"
+      "a d"
+      "c e"
+      "c f";
+  }
+}
+
+@media (max-width: 799px) {
+  .project-card {
+    width: 100%;
+  }
+  .itemSpan {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 800px) {
+  .WeekSitting {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
