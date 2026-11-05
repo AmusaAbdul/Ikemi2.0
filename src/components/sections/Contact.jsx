@@ -41,7 +41,7 @@ const Contact = () => {
 
                         <span className="flex flex-col">
                             <label htmlFor="service">Service</label>
-                            <select name="service" className="itemSpan WeekSitting bg-border rounded-xl p-2 text-white">
+                            <select name="service" className="itemSpan WeekSitting bg-border rounded-xl p-3 text-white">
                                 <option value="bridal">Bridal makeup</option>
                                 <option value="softglam">Soft glam</option>
                                 <option value="owambe">Owambe glam</option>
@@ -52,12 +52,12 @@ const Contact = () => {
 
                         <span className="flex flex-col">
                             <label htmlFor="Preferred Date">Preferred Date</label>
-                            <input name="date" type="date" className="itemSpan WeekSitting bg-border rounded-xl p-2 text-white" />
+                            <input name="date" type="date" className="itemSpan WeekSitting bg-border rounded-xl p-3 text-white" />
                         </span>
 
                         <span className="flex flex-col">
                             <label htmlFor="Preferred Time">Preferred Time</label>
-                            <input name="time" type="time" className="itemSpan WeekSitting bg-border rounded-xl p-2 text-white" />
+                            <input name="time" type="time" className="itemSpan WeekSitting bg-border rounded-xl p-3 text-white" />
                         </span>
 
                         <span className="flex flex-col">
